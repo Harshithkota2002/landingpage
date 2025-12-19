@@ -124,19 +124,19 @@ export const portfolioData = {
     items: [
       {
         course: "B.Tech — Computer Science",
-        school: "Annamcharya Institute of Technology and Sciences",
+        school: "Annamacharya Institute of Technology and Sciences",
         year: "2021 — 2024",
         note: "Focused on core CS, web development and projects.",
       },
       {
         course: "Polytechnic Diploma — chemical engineering",
-        school: "shree venkateshwarq government polytechnic college",
+        school: "shree venkateshwara government polytechnic college",
         year: "2018 — 2021",
        
       },
        {
         course: "10th Standard",
-        school: "viswabharathi vidyanikethan high school",
+        school: "vishwabharath vidyanikethan high school",
         year: "2017 - 2018",
        
       },
@@ -190,9 +190,21 @@ export const portfolioData = {
         company: "Ryvoc Ideas private limited",
         period: " 2025 - 2026 Present",
         points: [
-          "Created UI and REST APIs using Node/Express and MongoDB.",
-          "Worked on authentication, admin flows, and deployment basics.",
-          "Used Git/GitHub workflows to build and ship web applications.",
+          "Developed and maintained Admin Panel features for a friend online application, including user/host management, call history, coin transactions, reports, and platform settings using React and Redux.",
+
+"Implemented secure admin authentication and role-based access control using JWT, protected routes, and authorization middleware.",
+
+"Built scalable REST APIs in Node.js and Express with MongoDB for moderation, analytics, billing, and transaction tracking.",
+
+"Designed high-performance tables and dashboards with pagination, search, date filters, and real-time status indicators.",
+
+"Integrated end-to-end API workflows with centralized Axios handling, error management, and consistent response structures.",
+
+"Optimized backend performance using indexed MongoDB queries, lean payloads, and lite APIs for admin dropdowns and search.",
+
+"Implemented secure file uploads, validation, and audit logging for admin actions.",
+
+"Collaborated closely with frontend, backend, and mobile teams to align API contracts and deliver production-ready features.",
         ],
       },
       {
