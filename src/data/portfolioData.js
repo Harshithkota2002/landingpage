@@ -1,5 +1,5 @@
 export const portfolioData = {
-  brand: "HarshaWorld",
+  brand: "HarshithWorld",
  //defaultName: "Harsha",
 
   roles: [
@@ -8,6 +8,8 @@ export const portfolioData = {
     "React Developer",
     "Node.js Developer",
     "Full Stack Developer",
+    "Prompt Engineer",
+    
   ],
 
   hero: {
@@ -30,7 +32,8 @@ export const portfolioData = {
   about: {
     title: "About Me",
     body:
-      "Hi! I’m Kota Harshith — a MERN stack developer who loves building fast, clean, and modern products.\n\n" +
+       "Hey i am playing with ai powered mern stack development and also forgot to say i am Learning React-native also my friend .",
+      "Hi! I’m Kota Harshith — a MERN stack developer I loves building fast, clean, and modern products.\n\n" +
       "I enjoy creating dashboards, admin panels, APIs, and pixel-perfect UI with strong state management and scalable structure.",
     highlights: [
       "Clean code + reusable components",
@@ -188,7 +191,7 @@ export const portfolioData = {
       {
         role: "MERN Full stack developer",
         company: "Ryvoc Ideas private limited",
-        period: " 2025 - 2026 Present",
+        period: " 2025 - 2026 Present Working ",
         points: [
           "Developed and maintained Admin Panel features for a friend online application, including user/host management, call history, coin transactions, reports, and platform settings using React and Redux.",
 
