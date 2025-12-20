@@ -14,7 +14,7 @@ export const portfolioData = {
 
   hero: {
     location: "India",
-    headline: "Building modern web experiences with speed & style.",
+    headline: "Building modern web experiences with speed & stylish.",
     subline:
       "I craft clean, scalable MERN applications with beautiful UI, strong architecture, and performance-first thinking.",
     email: "harshawork437.com",
