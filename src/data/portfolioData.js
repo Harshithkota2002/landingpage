@@ -5,6 +5,7 @@ export const portfolioData = {
   roles: [
     "MERN Stack Developer",
     "Frontend Developer",
+    "AI developer",
     "React Developer",
     "Node.js Developer",
     "Full Stack Developer",
