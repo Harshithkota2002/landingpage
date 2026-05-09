@@ -1,35 +1,39 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import PortfolioPage from "./pages/PortfolioPage";
 
 export default function App() {
-  const [mode, setMode] = useState("dark");
+  const mode = "dark";
 
   const theme = useMemo(
     () =>
       createTheme({
         palette: {
-          mode,
-          primary: { main: "#8b5cf6" },
-          secondary: { main: "#22c55e" },
+          mode: "dark",
+          primary: { main: "#3b82f6" },
+          secondary: { main: "#38bdf8" },
           background: {
-            default: mode === "dark" ? "#070b14" : "#f7f8fc",
-            paper: mode === "dark" ? "#0b1020" : "#ffffff",
+            default: "#000000",
+            paper: "#070b14",
+          },
+          text: {
+            primary: "#ffffff",
+            secondary: "rgba(255,255,255,0.72)",
           },
         },
-        shape: { borderRadius: 20 },
+        shape: { borderRadius: 16 },
         typography: {
           fontFamily:
             'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI"',
         },
       }),
-    [mode]
+    []
   );
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <PortfolioPage mode={mode} setMode={setMode} />
+      <PortfolioPage mode={mode} />
     </ThemeProvider>
   );
 }

@@ -20,13 +20,16 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
-import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import OpenInNewRoundedIcon from "@mui/icons-material/OpenInNewRounded";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import ContentCopyRoundedIcon from "@mui/icons-material/ContentCopyRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
+import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
+import RocketLaunchRoundedIcon from "@mui/icons-material/RocketLaunchRounded";
+import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
+import ExtensionRoundedIcon from "@mui/icons-material/ExtensionRounded";
+import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
 
 import { Link as ScrollLink, Element } from "react-scroll";
 import { portfolioData } from "../data/portfolioData";
@@ -43,8 +46,8 @@ function AmbientLights({ mode }) {
           pointerEvents: "none",
           zIndex: 0,
           background: isDark
-            ? "radial-gradient(900px 520px at 14% 18%, rgba(99,102,241,0.16), transparent 62%), radial-gradient(820px 500px at 86% 20%, rgba(6,182,212,0.12), transparent 62%), radial-gradient(900px 560px at 52% 110%, rgba(16,185,129,0.10), transparent 65%), linear-gradient(180deg, #070B12 0%, #07111E 40%, #061018 100%)"
-            : "radial-gradient(900px 520px at 14% 18%, rgba(99,102,241,0.18), transparent 62%), radial-gradient(820px 500px at 86% 20%, rgba(6,182,212,0.12), transparent 62%), radial-gradient(900px 560px at 52% 110%, rgba(16,185,129,0.10), transparent 65%), linear-gradient(180deg, #F7FAFF 0%, #F6F3FF 35%, #F6FFFB 100%)",
+            ? "radial-gradient(820px 460px at 12% 9%, rgba(59,130,246,0.22), transparent 64%), radial-gradient(760px 460px at 88% 18%, rgba(56,189,248,0.16), transparent 62%), radial-gradient(840px 520px at 50% 108%, rgba(29,78,216,0.17), transparent 66%), linear-gradient(180deg, #000000 0%, #02040a 52%, #000000 100%)"
+            : "linear-gradient(180deg, #000000 0%, #02040a 52%, #000000 100%)",
         }}
       />
       <Box
@@ -55,7 +58,7 @@ function AmbientLights({ mode }) {
           left: -150,
           top: 80,
           borderRadius: 999,
-          background: isDark ? "rgba(99,102,241,0.12)" : "rgba(99,102,241,0.14)",
+          background: "rgba(59,130,246,0.16)",
           filter: "blur(72px)",
           opacity: 0.85,
           pointerEvents: "none",
@@ -70,7 +73,7 @@ function AmbientLights({ mode }) {
           right: -150,
           top: 120,
           borderRadius: 999,
-          background: isDark ? "rgba(6,182,212,0.10)" : "rgba(6,182,212,0.12)",
+          background: "rgba(56,189,248,0.12)",
           filter: "blur(72px)",
           opacity: 0.8,
           pointerEvents: "none",
@@ -85,7 +88,7 @@ function AmbientLights({ mode }) {
           left: "36%",
           bottom: -240,
           borderRadius: 999,
-          background: isDark ? "rgba(16,185,129,0.09)" : "rgba(16,185,129,0.10)",
+          background: "rgba(29,78,216,0.13)",
           filter: "blur(78px)",
           opacity: 0.8,
           pointerEvents: "none",
@@ -142,20 +145,26 @@ function CardShell({ mode, active = false, children, sx }) {
     <Box
       sx={{
         position: "relative",
-        borderRadius: 3,
+        borderRadius: 2,
         overflow: "hidden",
         border: "1px solid",
         borderColor: active
           ? isDark
-            ? "rgba(99,102,241,0.34)"
-            : "rgba(99,102,241,0.26)"
+            ? "rgba(59,130,246,0.60)"
+            : "rgba(59,130,246,0.42)"
           : isDark
           ? "rgba(255,255,255,0.10)"
           : "rgba(15,23,42,0.10)",
         background: isDark
-          ? "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))"
-          : "linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.78))",
-        boxShadow: isDark ? "0 12px 36px rgba(0,0,0,0.28)" : "0 12px 34px rgba(15,23,42,0.10)",
+          ? "linear-gradient(145deg, rgba(13,18,32,0.95), rgba(4,8,18,0.92))"
+          : "linear-gradient(145deg, rgba(255,255,255,0.98), rgba(255,255,255,0.78))",
+        boxShadow: isDark ? "0 22px 60px rgba(0,0,0,0.58)" : "0 18px 44px rgba(15,23,42,0.11)",
+        transition: "transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease",
+        "&:hover": {
+          transform: "translateY(-3px)",
+          borderColor: isDark ? "rgba(59,130,246,0.58)" : "rgba(59,130,246,0.34)",
+          boxShadow: isDark ? "0 26px 76px rgba(0,0,0,0.70)" : "0 22px 56px rgba(15,23,42,0.14)",
+        },
         ...sx,
       }}
     >
@@ -165,8 +174,8 @@ function CardShell({ mode, active = false, children, sx }) {
           inset: 0,
           pointerEvents: "none",
           background: isDark
-            ? "radial-gradient(600px 220px at 15% 0%, rgba(99,102,241,0.12), transparent 60%)"
-            : "radial-gradient(600px 220px at 15% 0%, rgba(99,102,241,0.10), transparent 60%)",
+            ? "radial-gradient(650px 240px at 15% 0%, rgba(59,130,246,0.14), transparent 60%), radial-gradient(420px 200px at 95% 0%, rgba(56,189,248,0.10), transparent 65%)"
+            : "radial-gradient(650px 240px at 15% 0%, rgba(59,130,246,0.12), transparent 60%)",
           opacity: 0.9,
         }}
       />
@@ -178,7 +187,13 @@ function CardShell({ mode, active = false, children, sx }) {
 function TitleBlock({ title, subtitle }) {
   return (
     <Stack spacing={0.6} sx={{ mb: 2 }}>
-      <Typography variant="h4" sx={{ fontWeight: 950, letterSpacing: -0.7, lineHeight: 1.15 }}>
+      <Stack direction="row" spacing={1} alignItems="center">
+        <AutoAwesomeRoundedIcon color="primary" fontSize="small" />
+        <Typography variant="overline" color="primary" sx={{ fontWeight: 950, letterSpacing: 1.4 }}>
+          Featured
+        </Typography>
+      </Stack>
+      <Typography variant="h4" color="primary" sx={{ fontWeight: 950, letterSpacing: -0.7, lineHeight: 1.15 }}>
         {title}
       </Typography>
       {subtitle ? (
@@ -204,6 +219,11 @@ function StatPill({ mode, label, value, colors }) {
           ? "linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))"
           : "linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.72))",
         minWidth: 150,
+        transition: "transform 180ms ease, border-color 180ms ease",
+        "&:hover": {
+          transform: "translateY(-4px)",
+          borderColor: colors.accent,
+        },
       }}
     >
       <Typography sx={{ fontWeight: 950, fontSize: 15.5, lineHeight: 1.15 }}>
@@ -256,6 +276,8 @@ function StarRating({ value = 3 }) {
 function SkillRow({ mode, name, level }) {
   const isDark = mode === "dark";
   const stars = toStars(level);
+  const raw = Number(level);
+  const percent = Number.isFinite(raw) ? Math.min(100, raw <= 10 ? raw * 10 : raw) : stars * 20;
 
   return (
     <Box
@@ -267,6 +289,11 @@ function SkillRow({ mode, name, level }) {
         background: isDark
           ? "linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))"
           : "linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.74))",
+        transition: "transform 180ms ease, border-color 180ms ease, background 180ms ease",
+        "&:hover": {
+          transform: "translateY(-4px)",
+          borderColor: isDark ? "rgba(59,130,246,0.48)" : "rgba(59,130,246,0.36)",
+        },
       }}
     >
       <Stack direction="row" alignItems="center" justifyContent="space-between">
@@ -288,12 +315,36 @@ function SkillRow({ mode, name, level }) {
       <Box sx={{ mt: 0.8 }}>
         <StarRating value={stars} />
       </Box>
+      <Box
+        sx={{
+          mt: 1,
+          height: 7,
+          borderRadius: 999,
+          overflow: "hidden",
+          bgcolor: isDark ? "rgba(255,255,255,0.08)" : "rgba(15,23,42,0.08)",
+        }}
+      >
+        <Box
+          sx={{
+            width: `${percent}%`,
+            height: "100%",
+            borderRadius: 999,
+            background: "linear-gradient(90deg, #14b8a6, #0ea5e9, #f97316)",
+          }}
+        />
+      </Box>
     </Box>
   );
 }
 
 /* -------------------- Images animation (NO hover) -------------------- */
 function SoftFloatImage({ src, alt, mode }) {
+  const [currentSrc, setCurrentSrc] = React.useState(src);
+
+  React.useEffect(() => {
+    setCurrentSrc(src);
+  }, [src]);
+
   return (
     <Box
       sx={{
@@ -309,12 +360,18 @@ function SoftFloatImage({ src, alt, mode }) {
     >
       <Box
         component="img"
-        src={src}
+        src={currentSrc}
         alt={alt}
+        onError={() => {
+          if (currentSrc !== "/WhatsApp%20Image%202026-05-07%20at%205.16.40%20PM.jpeg") {
+            setCurrentSrc("/WhatsApp%20Image%202026-05-07%20at%205.16.40%20PM.jpeg");
+          }
+        }}
         sx={{
           width: "100%",
           height: "100%",
           objectFit: "cover",
+          objectPosition: "50% 50%",
           borderRadius: 3,
           border: "1px solid",
           borderColor: mode === "dark" ? "rgba(255,255,255,0.10)" : "rgba(15,23,42,0.10)",
@@ -327,7 +384,6 @@ function SoftFloatImage({ src, alt, mode }) {
 function SkillsAutoGallery({ images = [], mode }) {
   const isDark = mode === "dark";
   const safe = Array.isArray(images) ? images.filter(Boolean) : [];
-  const loop = [...safe, ...safe];
 
   return (
     <Box
@@ -347,18 +403,16 @@ function SkillsAutoGallery({ images = [], mode }) {
           display: "flex",
           gap: 1.2,
           p: 1.4,
-          width: "max-content",
-          willChange: "transform",
-          transform: "translate3d(0,0,0)",
-          backfaceVisibility: "hidden",
-          animation: "marquee 28s linear infinite",
-          "@keyframes marquee": {
-            "0%": { transform: "translate3d(0,0,0)" },
-            "100%": { transform: "translate3d(-50%,0,0)" },
+          overflowX: "auto",
+          scrollSnapType: "x mandatory",
+          "&::-webkit-scrollbar": { height: 6 },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "rgba(59,130,246,0.35)",
+            borderRadius: 4,
           },
         }}
       >
-        {loop.map((src, i) => (
+        {safe.map((src, i) => (
           <Box
             key={`${src}-${i}`}
             sx={{
@@ -370,6 +424,7 @@ function SkillsAutoGallery({ images = [], mode }) {
               borderColor: isDark ? "rgba(255,255,255,0.10)" : "rgba(15,23,42,0.10)",
               background: isDark ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.9)",
               flex: "0 0 auto",
+              scrollSnapAlign: "start",
             }}
           >
             <Box
@@ -453,10 +508,24 @@ function ProjectCard({ mode, p, colors }) {
         height: "100%",
         display: "flex",
         flexDirection: "column",
+        transition: "transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease",
+        "&:hover": {
+          transform: "translateY(-7px)",
+          borderColor: isDark ? "rgba(59,130,246,0.54)" : "rgba(59,130,246,0.34)",
+          boxShadow: isDark ? "0 24px 66px rgba(0,0,0,0.38)" : "0 20px 50px rgba(15,23,42,0.14)",
+        },
+        "&:hover img": {
+          transform: "scale(1.06)",
+        },
       }}
     >
       <Box sx={{ height: 170, position: "relative" }}>
-        <Box component="img" src={cover} alt={p.title} sx={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <Box
+          component="img"
+          src={cover}
+          alt={p.title}
+          sx={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 420ms ease" }}
+        />
         <Box
           sx={{
             position: "absolute",
@@ -482,9 +551,9 @@ function ProjectCard({ mode, p, colors }) {
               sx={{
                 borderRadius: 2,
                 fontWeight: 900,
-                bgcolor: mode === "dark" ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.92)",
+                bgcolor: mode === "dark" ? "rgba(59,130,246,0.12)" : "rgba(59,130,246,0.08)",
                 border: "1px solid",
-                borderColor: mode === "dark" ? "rgba(255,255,255,0.10)" : "rgba(15,23,42,0.10)",
+                borderColor: mode === "dark" ? "rgba(59,130,246,0.24)" : "rgba(59,130,246,0.16)",
               }}
             />
           ))}
@@ -508,6 +577,11 @@ function ProjectCard({ mode, p, colors }) {
               textTransform: "none",
               fontWeight: 950,
               background: `linear-gradient(135deg, ${colors.primary}, ${colors.accent})`,
+              boxShadow: "none",
+              "&:hover": {
+                boxShadow: `0 12px 26px ${colors.glow}`,
+                transform: "translateY(-2px)",
+              },
             }}
           >
             View Project
@@ -518,8 +592,52 @@ function ProjectCard({ mode, p, colors }) {
   );
 }
 
+function CapabilityCard({ mode, icon, title, text, colors }) {
+  const isDark = mode === "dark";
+  return (
+    <Box
+      sx={{
+        p: 1.6,
+        borderRadius: 2,
+        border: "1px solid",
+        borderColor: isDark ? "rgba(255,255,255,0.10)" : "rgba(15,23,42,0.10)",
+        background: isDark
+          ? "linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03))"
+          : "linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.72))",
+        transition: "transform 200ms ease, border-color 200ms ease",
+        "&:hover": {
+          transform: "translateY(-5px)",
+          borderColor: colors.accent,
+        },
+      }}
+    >
+      <Stack direction="row" spacing={1.2} alignItems="flex-start">
+        <Box
+          sx={{
+            width: 42,
+            height: 42,
+            borderRadius: 2,
+            display: "grid",
+            placeItems: "center",
+            color: "#fff",
+            background: `linear-gradient(135deg, ${colors.primary}, ${colors.accent})`,
+          }}
+        >
+          {icon}
+        </Box>
+        <Box>
+          <Typography sx={{ fontWeight: 950, lineHeight: 1.15 }}>{title}</Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5, lineHeight: 1.6 }}>
+            {text}
+          </Typography>
+        </Box>
+      </Stack>
+    </Box>
+  );
+}
+
 /* -------------------- page -------------------- */
-export default function PortfolioPage({ mode, setMode }) {
+export default function PortfolioPage({ mode }) {
   const name = useUsername();
   const isMdUp = useMediaQuery("(min-width:900px)");
 
@@ -527,10 +645,14 @@ export default function PortfolioPage({ mode, setMode }) {
   const [mobileMenuEl, setMobileMenuEl] = React.useState(null);
   const [toast, setToast] = React.useState({ open: false, text: "" });
 
-  const colors =
-    mode === "dark"
-      ? { primary: "#6366F1", accent: "#06B6D4", text: "rgba(255,255,255,0.92)", sub: "rgba(255,255,255,0.74)" }
-      : { primary: "#5B5EF2", accent: "#05B6D6", text: "rgba(15,23,42,0.92)", sub: "rgba(15,23,42,0.72)" };
+  const colors = {
+    primary: "#3B82F6",
+    accent: "#38BDF8",
+    cool: "#60A5FA",
+    glow: "rgba(59,130,246,0.30)",
+    text: "#FFFFFF",
+    sub: "rgba(255,255,255,0.74)",
+  };
 
   const roleAnim = useRotatingText(portfolioData.roles, 1600);
 
@@ -596,7 +718,7 @@ export default function PortfolioPage({ mode, setMode }) {
     }
   };
 
-  const bg = mode === "dark" ? "#070B12" : "#F5F8FF";
+  const bg = "#000000";
 
   // ✅ One place to use email everywhere (Hire Me / Contact buttons too)
   const emailToUse = portfolioData?.contact?.email || portfolioData?.hero?.email || "";
@@ -611,7 +733,7 @@ export default function PortfolioPage({ mode, setMode }) {
         elevation={0}
         sx={{
           backdropFilter: "blur(14px)",
-          backgroundColor: mode === "dark" ? "rgba(8,12,20,0.84)" : "rgba(245,248,255,0.94)",
+          backgroundColor: "rgba(0,0,0,0.86)",
           borderBottom: "1px solid",
           borderColor: mode === "dark" ? "rgba(255,255,255,0.10)" : "rgba(15,23,42,0.10)",
           zIndex: 5,
@@ -625,7 +747,7 @@ export default function PortfolioPage({ mode, setMode }) {
                 height: 10,
                 borderRadius: 999,
                 background: `linear-gradient(135deg, ${colors.primary}, ${colors.accent})`,
-                boxShadow: mode === "dark" ? "0 0 0 7px rgba(99,102,241,0.10)" : "0 0 0 7px rgba(99,102,241,0.08)",
+                boxShadow: "0 0 0 7px rgba(59,130,246,0.12)",
               }}
             />
             <Typography sx={{ fontWeight: 950, letterSpacing: -0.3 }}>{portfolioData.brand}</Typography>
@@ -655,7 +777,16 @@ export default function PortfolioPage({ mode, setMode }) {
                         color: active ? "#fff" : mode === "dark" ? "rgba(255,255,255,0.84)" : "rgba(15,23,42,0.86)",
                         background: active ? `linear-gradient(135deg, ${colors.primary}, ${colors.accent})` : "transparent",
                         border: "1px solid",
-                        borderColor: active ? "rgba(99,102,241,0.34)" : "transparent",
+                        borderColor: active ? "rgba(59,130,246,0.42)" : "transparent",
+                        transition: "transform 180ms ease, background 180ms ease",
+                        "&:hover": {
+                          transform: "translateY(-2px)",
+                          background: active
+                            ? `linear-gradient(135deg, ${colors.primary}, ${colors.accent})`
+                            : mode === "dark"
+                            ? "rgba(255,255,255,0.06)"
+                            : "rgba(15,23,42,0.05)",
+                        },
                       }}
                     >
                       {n.label}
@@ -700,19 +831,6 @@ export default function PortfolioPage({ mode, setMode }) {
             </>
           ) : null}
 
-          <Tooltip title={mode === "dark" ? "Light mode" : "Dark mode"}>
-            <IconButton
-              onClick={() => setMode((p) => (p === "dark" ? "light" : "dark"))}
-              sx={{
-                borderRadius: 2,
-                border: "1px solid",
-                borderColor: mode === "dark" ? "rgba(255,255,255,0.12)" : "rgba(15,23,42,0.10)",
-                background: mode === "dark" ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.80)",
-              }}
-            >
-              {mode === "dark" ? <LightModeRoundedIcon /> : <DarkModeRoundedIcon />}
-            </IconButton>
-          </Tooltip>
         </Toolbar>
       </AppBar>
 
@@ -723,18 +841,26 @@ export default function PortfolioPage({ mode, setMode }) {
           <Element name="home">
             <Box id="home" />
             <CardShell mode={mode} active={activeId === "home"}>
-              <Grid container spacing={{ xs: 2, md: 2.6 }} alignItems="center">
-                <Grid item xs={12} md={6}>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: { xs: "1fr", md: "minmax(0, 1fr) minmax(360px, 0.9fr)" },
+                  gap: { xs: 2.4, md: 3.2 },
+                  alignItems: "center",
+                }}
+              >
+                <Box sx={{ minWidth: 0 }}>
                   <Stack spacing={1.6}>
                     <Stack direction="row" spacing={1} flexWrap="wrap">
                       <Chip
                         label={`Welcome to ${name} world`}
+                        icon={<RocketLaunchRoundedIcon />}
                         sx={{
                           fontWeight: 950,
                           borderRadius: 2,
-                          background: mode === "dark" ? "rgba(99,102,241,0.18)" : "rgba(99,102,241,0.14)",
+                          background: mode === "dark" ? "rgba(59,130,246,0.18)" : "rgba(59,130,246,0.12)",
                           border: "1px solid",
-                          borderColor: mode === "dark" ? "rgba(99,102,241,0.30)" : "rgba(99,102,241,0.22)",
+                          borderColor: mode === "dark" ? "rgba(59,130,246,0.34)" : "rgba(59,130,246,0.22)",
                         }}
                       />
                       <Chip label={portfolioData.hero.location} variant="outlined" sx={{ fontWeight: 900, borderRadius: 2 }} />
@@ -747,7 +873,7 @@ export default function PortfolioPage({ mode, setMode }) {
                         sx={{
                           display: "inline-block",
                           ml: 1,
-                          background: `linear-gradient(135deg, ${colors.primary}, ${colors.accent})`,
+                          background: `linear-gradient(135deg, ${colors.primary}, ${colors.cool}, ${colors.accent})`,
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
                           transition: "opacity 240ms ease, transform 240ms ease",
@@ -774,6 +900,8 @@ export default function PortfolioPage({ mode, setMode }) {
                           px: 3,
                           textTransform: "none",
                           background: `linear-gradient(135deg, ${colors.primary}, ${colors.accent})`,
+                          boxShadow: `0 12px 28px ${colors.glow}`,
+                          "&:hover": { transform: "translateY(-2px)", boxShadow: `0 16px 34px ${colors.glow}` },
                         }}
                         component="a"
                         href={`mailto:${emailToUse}`}
@@ -789,6 +917,10 @@ export default function PortfolioPage({ mode, setMode }) {
                           px: 3,
                           textTransform: "none",
                           borderColor: mode === "dark" ? "rgba(255,255,255,0.20)" : "rgba(15,23,42,0.18)",
+                          "&:hover": {
+                            borderColor: colors.primary,
+                            bgcolor: mode === "dark" ? "rgba(59,130,246,0.12)" : "rgba(59,130,246,0.08)",
+                          },
                         }}
                         component="a"
                         href={`mailto:${emailToUse}`}
@@ -829,24 +961,45 @@ export default function PortfolioPage({ mode, setMode }) {
                       ))}
                     </Stack>
                   </Stack>
-                </Grid>
+                </Box>
 
-                <Grid item xs={12} md={6}>
+                <Box
+                  sx={{
+                    minWidth: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
                   <Box
                     sx={{
-                      width: { xs: 290, md: 370 },
-                      height: { xs: 290, md: 370 },
-                      borderRadius: 3,
+                      position: "relative",
+                      width: { xs: "min(100%, 340px)", sm: 400, md: 430 },
+                      aspectRatio: "1324 / 1600",
+                      borderRadius: 2,
                       overflow: "hidden",
                       border: "1px solid",
                       borderColor: mode === "dark" ? "rgba(255,255,255,0.14)" : "rgba(15,23,42,0.12)",
                       background: mode === "dark" ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.9)",
                       mx: "auto",
-                      boxShadow: mode === "dark" ? "0 22px 70px rgba(0,0,0,0.30)" : "0 22px 70px rgba(15,23,42,0.12)",
+                      boxShadow: mode === "dark" ? "0 22px 70px rgba(0,0,0,0.35)" : "0 22px 70px rgba(15,23,42,0.12)",
                     }}
                   >
                     <SoftFloatImage src={portfolioData.hero.profileImage} alt={name} mode={mode} />
                   </Box>
+
+                  <Grid container spacing={1.2} sx={{ mt: 1.4 }}>
+                    <Grid item xs={12} sm={4}>
+                      <CapabilityCard mode={mode} colors={colors} icon={<CodeRoundedIcon />} title="MERN Apps" text="Dashboards, APIs, auth, admin workflows." />
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                      <CapabilityCard mode={mode} colors={colors} icon={<PhoneIphoneRoundedIcon />} title="Mobile UI" text="React Native screens and API flows." />
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                      <CapabilityCard mode={mode} colors={colors} icon={<ExtensionRoundedIcon />} title="Extensions" text="Chrome popup, scripts, storage." />
+                    </Grid>
+                  </Grid>
 
                   <Stack direction="row" spacing={2} sx={{ mt: 1.4, justifyContent: "center" }}>
                     <Link href={portfolioData.hero.linkedin} target="_blank" rel="noreferrer" underline="hover" sx={{ fontWeight: 900 }}>
@@ -856,8 +1009,8 @@ export default function PortfolioPage({ mode, setMode }) {
                       GitHub
                     </Link>
                   </Stack>
-                </Grid>
-              </Grid>
+                </Box>
+              </Box>
             </CardShell>
           </Element>
 
@@ -870,7 +1023,7 @@ export default function PortfolioPage({ mode, setMode }) {
               <Grid container spacing={2.2}>
                 <Grid item xs={12} md={7}>
                   <Typography color="text.secondary" sx={{ lineHeight: 1.9, whiteSpace: "pre-line" }}>
-                    {portfolioData.about.body}
+                    {portfolioData.about.cleanBody || portfolioData.about.body}
                   </Typography>
                 </Grid>
 
@@ -888,6 +1041,11 @@ export default function PortfolioPage({ mode, setMode }) {
                               mode === "dark"
                                 ? "linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))"
                                 : "linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.74))",
+                            transition: "transform 180ms ease, border-color 180ms ease",
+                            "&:hover": {
+                              transform: "translateX(6px)",
+                              borderColor: colors.primary,
+                            },
                           }}
                         >
                           <Typography sx={{ fontWeight: 950 }}>{h}</Typography>
@@ -919,6 +1077,11 @@ export default function PortfolioPage({ mode, setMode }) {
                         mode === "dark"
                           ? "linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))"
                           : "linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.74))",
+                      transition: "transform 200ms ease, border-color 200ms ease",
+                      "&:hover": {
+                        transform: "translateY(-5px)",
+                        borderColor: colors.primary,
+                      },
                     }}
                   >
                     <Stack direction={{ xs: "column", md: "row" }} justifyContent="space-between" spacing={1}>
@@ -934,15 +1097,42 @@ export default function PortfolioPage({ mode, setMode }) {
                         sx={{
                           borderRadius: 2,
                           fontWeight: 950,
-                          bgcolor: mode === "dark" ? "rgba(99,102,241,0.14)" : "rgba(99,102,241,0.12)",
+                          bgcolor: mode === "dark" ? "rgba(59,130,246,0.14)" : "rgba(59,130,246,0.12)",
                           border: "1px solid",
-                          borderColor: mode === "dark" ? "rgba(99,102,241,0.26)" : "rgba(99,102,241,0.22)",
+                          borderColor: mode === "dark" ? "rgba(59,130,246,0.30)" : "rgba(59,130,246,0.22)",
                         }}
                       />
                     </Stack>
 
+                    {x.stack?.length ? (
+                      <Stack direction="row" spacing={0.7} flexWrap="wrap" sx={{ mt: 1.2 }}>
+                        {x.stack.map((t) => (
+                          <Chip
+                            key={t}
+                            label={t}
+                            size="small"
+                            sx={{
+                              borderRadius: 2,
+                              fontWeight: 900,
+                              bgcolor: mode === "dark" ? "rgba(56,189,248,0.10)" : "rgba(56,189,248,0.08)",
+                              border: "1px solid",
+                              borderColor: mode === "dark" ? "rgba(56,189,248,0.22)" : "rgba(56,189,248,0.16)",
+                            }}
+                          />
+                        ))}
+                      </Stack>
+                    ) : null}
+
                     <Divider sx={{ my: 1.2, opacity: 0.35 }} />
 
+                    <Box
+                      sx={{
+                        display: "grid",
+                        gridTemplateColumns: x.images?.length ? { xs: "1fr", md: "minmax(0, 1fr) 250px" } : "1fr",
+                        gap: { xs: 1.6, md: 2 },
+                        alignItems: "start",
+                      }}
+                    >
                     <Stack spacing={0.8}>
                       {(x.points || []).map((pt) => (
                         <Typography key={pt} color="text.secondary" sx={{ lineHeight: 1.7 }}>
@@ -950,6 +1140,38 @@ export default function PortfolioPage({ mode, setMode }) {
                         </Typography>
                       ))}
                     </Stack>
+
+                      {x.images?.length ? (
+                        <Box
+                          sx={{
+                            display: "grid",
+                            gridTemplateColumns: { xs: "repeat(2, minmax(0, 1fr))", md: "1fr" },
+                            gap: 1,
+                          }}
+                        >
+                          {x.images.map((src, index) => (
+                            <Box
+                              key={src}
+                              component="img"
+                              src={src}
+                              alt={`${x.company} office ${index + 1}`}
+                              loading="lazy"
+                              sx={{
+                                width: "100%",
+                                height: { xs: 150, sm: 190, md: 170 },
+                                objectFit: "cover",
+                                objectPosition: index === 0 ? "48% 36%" : "52% 38%",
+                                display: "block",
+                                borderRadius: 2,
+                                border: "1px solid",
+                                borderColor: mode === "dark" ? "rgba(255,255,255,0.12)" : "rgba(15,23,42,0.10)",
+                                boxShadow: mode === "dark" ? "0 12px 30px rgba(0,0,0,0.32)" : "0 10px 24px rgba(15,23,42,0.10)",
+                              }}
+                            />
+                          ))}
+                        </Box>
+                      ) : null}
+                    </Box>
                   </Box>
                 ))}
               </Stack>

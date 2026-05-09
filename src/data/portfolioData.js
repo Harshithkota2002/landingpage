@@ -5,6 +5,8 @@ export const portfolioData = {
   roles: [
     "MERN Stack Developer",
     "Frontend Developer",
+    "React Native Developer",
+    "Chrome Extension Builder",
     "AI developer",
     "React Developer",
     "Node.js Developer",
@@ -15,31 +17,38 @@ export const portfolioData = {
 
   hero: {
     location: "India",
-    headline: "Building modern web experiences with speed & stylish.",
+    headline: "I build web, mobile, and browser tools with clean UI and fast backend logic.",
     subline:
-      "I craft clean, scalable MERN applications with beautiful UI, strong architecture, and performance-first thinking.",
-    email: "harshawork437.com",
+      "MERN developer focused on polished dashboards, secure APIs, React Native app screens, Chrome extensions, and AI-assisted workflows that feel smooth in real use.",
+    email: "harshawork437@gmail.com",
     linkedin: "https://www.linkedin.com/in/harsha468",
     github: "https://github.com/harshithkota2002",
-    profileImage:
-      "https://img.freepik.com/free-photo/person-playing-3d-video-games-device_23-2151005751.jpg?semt=ais_hybrid&w=740&q=80",
+    profileImage: "/profile-photo.jpg",
     quickStats: [
       { label: "Experience", value: "1.5+ yrs" },
-      { label: "Projects", value: "18+" },
-      { label: "UI Focus", value: "MUI / Tailwind" },
+      { label: "Projects", value: "20+" },
+      { label: "Mobile", value: "React Native" },
+      { label: "Extensions", value: "Chrome APIs" },
     ],
   },
 
   about: {
     title: "About Me",
+    cleanBody:
+      "Hi! I am Kota Harshith, a MERN stack developer who loves building fast, clean, and modern products.\n\n" +
+      "I work on admin dashboards, scalable REST APIs, React Native mobile experiences, Chrome extensions, and AI-powered developer workflows.\n\n" +
+      "My style is simple: clean components, smooth UX, secure backend logic, and interfaces that look professional on every screen.",
     body:
-       "Hey i am playing with ai powered mern stack development and also forgot to say i am Learning React-native also my friend .",
+      "Hi! I am Kota Harshith, a MERN stack developer who loves building fast, clean, and modern products.\n\n" +
       "Hi! I’m Kota Harshith — a MERN stack developer I loves building fast, clean, and modern products.\n\n" +
-      "I enjoy creating dashboards, admin panels, APIs, and pixel-perfect UI with strong state management and scalable structure.",
+      "I work on admin dashboards, scalable REST APIs, React Native mobile experiences, Chrome extensions, and AI-powered developer workflows.\n\n" +
+      "My style is simple: clean components, smooth UX, secure backend logic, and interfaces that look professional on every screen.",
     highlights: [
       "Clean code + reusable components",
       "Modern UI (MUI) + responsive layouts",
       "REST APIs + JWT auth + MongoDB",
+      "React Native mobile screens",
+      "Chrome extensions + browser automation",
       "Deployment + performance optimization",
     ],
   },
@@ -48,6 +57,9 @@ export const portfolioData = {
     title: "Skills",
     items: [
       { name: "React", level: 9 },      // 0..10 OK
+      { name: "React Native", level: 78 },
+      { name: "Chrome Extensions", level: 80 },
+      { name: "JavaScript", level: 90 },
       { name: "Node.js", level: 85 },   // 0..100 OK
       { name: "MongoDB", level: 80 },
       { name: "Express", level: 82 },
@@ -56,6 +68,12 @@ export const portfolioData = {
       { name: "Redux", level: 84 },
       { name: "REST APIs", level: 88 },
       { name: "Python", level: 98 },
+    ],
+    focusAreas: [
+      "Modern UI with MUI, Tailwind thinking, animations, and responsive layouts",
+      "Clean Node.js APIs with JWT auth, MongoDB models, file uploads, and admin workflows",
+      "React Native screens, reusable mobile components, and API integration",
+      "Chrome extensions using popup UI, content scripts, storage, and browser automation",
     ],
     images: [
   // React
@@ -182,6 +200,22 @@ export const portfolioData = {
         image:
           "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTTcYARR70q1yM2sWAaKNm8jip7uTu1czv6SyWtVRX9Ou92M2IIyePMRH3Pz6sl9WgcmjhALtcYru35LMv0wjnH52KzSyLgdszKfPMIfDD-xZ_ogtecjtSp",
       },
+      {
+        title: "React Native Service App",
+        desc: "Mobile-first app screens with reusable components, API integration, form validation, and clean navigation flows.",
+        tags: ["React Native", "Mobile UI", "API"],
+        link: "https://example.com",
+        image:
+          "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=70",
+      },
+      {
+        title: "Productivity Chrome Extension",
+        desc: "Browser extension concept with popup UI, content scripts, local storage, quick actions, and workflow automation.",
+        tags: ["Chrome API", "JavaScript", "Extension"],
+        link: "https://example.com",
+        image:
+          "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=70",
+      },
     ],
   },
 
@@ -193,6 +227,10 @@ export const portfolioData = {
         role: "MERN Full stack developer",
         company: "Ryvoc Ideas private limited",
         period: " 2025 - 2026 Present Working ",
+        stack: ["React", "Redux", "Node.js", "MongoDB", "MUI"],
+        images: [
+          "/experience-ryvoc-2.jpeg",
+        ],
         points: [
           "Developed and maintained Admin Panel features for a friend online application, including user/host management, call history, coin transactions, reports, and platform settings using React and Redux.",
 
@@ -212,9 +250,35 @@ export const portfolioData = {
         ],
       },
       {
+        role: "React Native Developer",
+        company: "Project Experience",
+        period: "2025 - Present",
+        stack: ["React Native", "Mobile UI", "REST APIs", "Reusable Components"],
+        points: [
+          "Designed mobile app screens with responsive layouts, reusable components, clean navigation, and polished form experiences.",
+          "Integrated REST APIs with loading, empty, success, and error states so mobile flows feel complete and reliable.",
+          "Applied React patterns from web development to mobile UI for consistent state handling and faster feature delivery.",
+        ],
+      },
+      {
+        role: "Chrome Extension Developer",
+        company: "Project Experience",
+        period: "2025 - Present",
+        stack: ["Chrome APIs", "JavaScript", "Content Scripts", "Storage"],
+        points: [
+          "Built extension-style workflows with popup UI, content scripts, browser storage, and quick user actions.",
+          "Created automation ideas for productivity, form helpers, page interaction, and developer workflow shortcuts.",
+          "Focused on lightweight UI, clear permissions, and small feature modules that are easy to maintain.",
+        ],
+      },
+      {
         role: "SAP ABAP Developer Intern",
         company: "ACS Company",
         period: "2024 — 2025 ",
+        stack: ["ABAP", "ALV", "BAPI", "RFC"],
+        images: [
+          "/experience-ryvoc-1.jpeg",
+        ],
         points: [
           "Developed and enhanced SAP ABAP programs using modular clean code (Reports, ALV, Function Modules, Smart Forms).",
           "Integrated SAP standard and custom interfaces (BAPIs, RFCs, IDocs) with optimized retrieval and authorization checks.",
